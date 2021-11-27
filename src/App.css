@@ -1,38 +1,324 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-container {
+  padding: 0.25rem 1rem;
+  background-color: #fff;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 0.25rem;
+  transition: 0.3s linear;
+}
+
+.nav-btn:hover {
+  color: #e13;
+  background-color: #f1e;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.ul-wrapper {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s linear;
+}
+
+.btn {
+  padding: 10px;
+  color: aqua;
+  background-color: brown;
+}
+
+h1,
+h2 {
+  color: #222;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.box {
+  margin: 0 auto;
+  background-color: #fff;
+  width: 40%;
+  padding: 1rem;
+}
+
+.ques-box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dotted #000;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  border: none;
+  background-color: #fff;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dotted #000;
+}
+
+#item-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.image {
+  width: 15rem;
+  height: 15rem;
+  border: 2px solid #222;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  color: #fefe;
+  font-size: 1.5rem;
+}
+
+.btns {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.btns button {
+  font-size: 2rem;
+  color: #222;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.slider-title {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.g-container {
+  position: relative;
+}
+
+.sild-container {
+  width: 40%;
+  min-height: 550px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slid-wrapper {
+  transition: 0.3s linear;
+  position: absolute;
+}
+
+.next-slid .slid-wrapper {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.active-slid .slid-wrapper {
+  transform: translateX(0);
+  opacity: 1;
+}
+.prev-slid .slid-wrapper {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.image-wrapper {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.description {
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.right {
+  position: absolute;
+  right: 20%;
+  top: 50%;
+}
+.left {
+  top: 50%;
+  left: 20%;
+  position: absolute;
+}
+
+.silde-icon {
+  font-size: 2rem;
+}
+
+.form-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+form label {
+  font-size: 2rem;
+}
+
+.param-input {
+  width: 7rem;
+  height: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bud-input {
+  height: 2rem;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  margin-right: 0.25rem;
+}
+.bud-input::placeholder {
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.submit-btn {
+  padding: 4px;
+  font-size: 18px;
+  background-color: #e3d;
+  color: #222;
+  border-radius: 5px;
+  transition: 0.3s linear;
+}
+.submit-btn:hover {
+  color: #e13;
+  background-color: #f1e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.param-wrapper {
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.param {
+  margin-bottom: 3rem;
+}
+
+/* grocery bud */
+
+.item-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: min-content;
 }
 
-.App-link {
-  color: #61dafb;
+.clear-all {
+  padding: 4px;
+  font-size: 18px;
+  background-color: #e3d;
+  color: #222;
+  border-radius: 5px;
+  transition: 0.3s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.clear-all:hover {
+  color: #e13;
+  background-color: #f1e;
+}
+
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bud-btn-wrapper {
+  padding-top: 0.25rem;
+}
+
+.bud-icon {
+  font-size: 1.5rem;
+}
+
+.bud-btn {
+  transition: 0.3s linear;
+}
+
+.bud-btn:hover {
+  color: #e13;
+  background-color: #f1e;
+}
+
+.bud-alert {
+  text-align: center;
+}
+
+.danger {
+  color: #e13;
+}
+
+.success {
+  color: #218000;
+}
+
+@media screen and (min-width: 568px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .link {
+    display: inline;
+    margin: 0.25rem;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .ul-wrapper {
+    height: auto !important;
   }
 }
